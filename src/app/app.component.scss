@@ -1,51 +1,92 @@
 :root {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
-
-.header {
-  display: inline;
-  position: fixed;
-  top: 0;
-  z-index: 9;
-  height: 130px;
-  width: 99.9vw;
-  border: solid 1px red;
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 10px 0 10px;
+  width: 100vw;
+  height: 100%;
   box-sizing: border-box;
-  margin: 2px;
 
-  .container {
+  .header {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    height: 70px;
     width: 100%;
-    height: 100%;
+    z-index: 2;
+    padding: 0 5px 0 5px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px 5px rgba($color: #000000, $alpha: 0.1);
+    background-color: #fff;
+    border: solid 1px rgb(224, 224, 224);
 
-    .logoContainer {
-      background-image: url('./../assets/banner2.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 280px;
+    .container {
       height: 100%;
-    }
-
-    .actionButtons {
+      width: 100%;
       display: flex;
-      align-items: center;
-      border: solid 1px red;
-      padding: 10px;
+      flex-direction: row;
+      justify-content: space-between;
 
-      a {
-        margin-right: 15px;
+      .logoContainer {
+        margin: 2px;
+        height: 90%;
+        width: 205px;
+        object-fit: cover;
+      }
+
+      .actionButtons {
+        display: flex;
+        align-items: center;
+
+        a {
+          font-size: large;
+          margin-right: 15px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 550;
+          font-style: normal;
+          color: #0f67af;
+          text-decoration: none;
+        }
+
+        #hickory {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          color: #fff;
+          background-color: #0f67af;
+          width: 140px;
+          height: 50px;
+          box-shadow: 1px 3px 2px 0px rgba($color: #000000, $alpha: 0.3);
+        }
       }
     }
   }
-}
 
-.body {
-  border: solid 1px rgb(5, 64, 192);
-  width: 100vw;
-  height: 100vh;
-  margin: 2px;
-  box-sizing: border-box;
+  .body {
+    width: 100%;
+    height: fit-content;
+
+    .imageShower {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .footer{
+    width: 100%;
+    height: 150px;
+    background-color: rgba($color: #F2F2F2, $alpha: 1);
+    color: #000000;
+    box-sizing: border-box;
+  }
 }

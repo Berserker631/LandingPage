@@ -1,0 +1,39 @@
+.slideShow-container{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  .arrow-container{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    padding: 0px 15px 0 15px;
+    height: fit-content;
+    user-select: none;
+    box-sizing: border-box;
+
+    .left-arrow{
+      scale: 2;
+      color: #747474;
+      cursor: pointer;
+
+    }
+
+    .right-arrow{
+      scale: 2;
+      color: #747474;
+      cursor: pointer;
+    }
+  }
+
+  img{
+    object-fit: cover;
+    object-position: 50%;
+    user-select: none;
+  }
+}

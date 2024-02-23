@@ -1,0 +1,11 @@
+<div class="slideShow-container">
+  <div class="arrow-container">
+    <mat-icon class="left-arrow" (click)="onPreviousClick()">keyboard_arrow_left</mat-icon>
+    <mat-icon class="right-arrow" (click)="onNextClick()">keyboard_arrow_right</mat-icon>
+  </div>
+  @for (slide of arSlides; track $index) {
+    @if ($index === vaCurrentSlide) {
+      <img height="550" [src]='slide.url' [alt]="slide.title" loading="lazy">
+    }
+  }
+</div>
