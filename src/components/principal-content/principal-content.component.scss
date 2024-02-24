@@ -1,31 +1,50 @@
 .wrapper {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  height: 100%;
+  padding: 10px;
   box-sizing: border-box;
-  overflow: hidden;
+  // height: 20vh;
 
-.content-1 {
-  border-radius: 5px;
-  background-color: #dbdbdb;
-  grid-area: 1 / 3 / 2 / 4;
-}
-.content-2 {
-  border-radius: 5px;
-  background-color: #dbdbdb;
-  grid-area: 2 / 3 / 3 / 4;
-}
-.content-3 {
-  border-radius: 5px;
-  background-color: #dbdbdb;
-  grid-area: 3 / 3 / 4 / 4;
-}
-.content-4 {
-  border-radius: 5px;
-  background-color: #dbdbdb;
-  grid-area: 1 / 1 / 4 / 3;
-}
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    .content-1 {
+      border-radius: 5px;
+      // width: 800px;
+      padding: 5px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      text-align: center;
+      grid-area: 1 / 3 / 2 / 4;
+      box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    .content-2 {
+      height: 500px;
+      border-radius: 5px;
+      background-color: #dbdbdb;
+      grid-area: 2 / 3 / 3 / 4;
+    }
+
+    .content-3 {
+      border-radius: 5px;
+      background-color: #dbdbdb;
+      grid-area: 3 / 3 / 4 / 4;
+    }
+
+    .content-4 {
+      border-radius: 5px;
+      background-color: #dbdbdb;
+      grid-area: 1 / 1 / 4 / 3;
+    }
+  }
 }
