@@ -5,7 +5,7 @@
   </div>
   @for (slide of arSlides; track $index) {
     @if ($index === vaCurrentSlide) {
-      <img height="550" [src]='slide.url' [alt]="slide.title" loading="lazy">
+      <img [src]='slide.url' [alt]="slide.title" loading="lazy">
     }
   }
 </div>
