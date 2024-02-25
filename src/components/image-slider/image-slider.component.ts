@@ -14,9 +14,11 @@ export class ImageSliderComponent implements OnInit {
   vaCurrentSlide: number = 0;
 
   arSlides = [
-    {url: '../../assets/banner1.png', title: 'TimeIsMoney'},
+    {url: '../../assets/banner5.png', title: 'portrait'},
+    {url: '../../assets/banner4.png', title: 'Benefits'},
     {url: '../../assets/banner2.png', title: 'Chart'},
-    {url: '../../assets/banner3.png', title: 'Worker'}
+    {url: '../../assets/banner3.png', title: 'Worker'},
+    {url: '../../assets/banner1.png', title: 'TimeIsMoney'}
   ]
   constructor() { }
 
