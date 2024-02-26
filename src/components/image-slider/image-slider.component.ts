@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   standalone: true,
@@ -9,15 +10,20 @@ import {MatIconModule} from '@angular/material/icon';
   selector: 'app-image-slider',
   templateUrl: './image-slider.component.html',
   styleUrls: ['./image-slider.component.scss'],
+  animations: [
+    trigger('slide', [
+
+    ])
+  ]
 })
 export class ImageSliderComponent implements OnInit {
   vaCurrentSlide: number = 0;
 
   arSlides = [
     {url: '../../assets/banner5.png', title: 'portrait'},
-    {url: '../../assets/banner4.png', title: 'Benefits'},
-    {url: '../../assets/banner2.png', title: 'Chart'},
-    {url: '../../assets/banner3.png', title: 'Worker'},
+    // {url: '../../assets/banner4.png', title: 'Benefits'},
+    // {url: '../../assets/banner2.png', title: 'Chart'},
+    // {url: '../../assets/banner3.png', title: 'Worker'},
     {url: '../../assets/banner1.png', title: 'TimeIsMoney'}
   ]
   constructor() { }
@@ -27,14 +33,14 @@ export class ImageSliderComponent implements OnInit {
   }
 
   onChangeImage(){
-    // setInterval(()=>{
-    //   if (this.vaCurrentSlide < 2) {
-    //     this.vaCurrentSlide++;
-    //   }
-    //   else {
-    //     this.vaCurrentSlide = 0
-    //   }
-    // }, 5000)
+    setInterval(()=>{
+      if (this.vaCurrentSlide < this.arSlides.length - 1) {
+        this.vaCurrentSlide++;
+      }
+      else {
+        this.vaCurrentSlide = 0
+      }
+    }, 5000)
   }
 
   onPreviousClick(){
