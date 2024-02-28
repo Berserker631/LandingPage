@@ -10,9 +10,6 @@ export class PrincipalContentComponent implements OnInit {
   images: any | undefined = [
     {src: "../../assets/announcment.png", alt:"announcment"},
     {src:"../../assets/leather.jpg", alt:"leather"},
-    {src:"../../assets/limits.png", alt:"announcment"},
-    {src: "../../assets/announcment.png", alt:"announcment"},
-    {src:"../../assets/leather.jpg", alt:"leather"},
     {src:"../../assets/limits.png", alt:"announcment"}
   ];
   currentPos = 0;
@@ -27,7 +24,6 @@ export class PrincipalContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // this.reposition();
   }
 
   reposition($event: any, index: number){
