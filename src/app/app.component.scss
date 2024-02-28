@@ -24,10 +24,10 @@
     width: 100%;
     top: 0;
     padding: 5px;
-    z-index: 2;
+    z-index: 3;
     box-sizing: border-box;
     box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.4);
-    border-bottom: solid 1px #292929;
+    border-bottom: solid 1px #575757;
     background-color: #1a1a1a;
     box-sizing: border-box;
 
@@ -40,8 +40,6 @@
       justify-content: space-between;
 
       .logoContainer {
-        // height: 90%;
-        // width: 205px;
         object-fit: cover;
       }
 
@@ -80,7 +78,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding:0 5px 0 5px;
+    // padding:0 5px 0 5px;
     box-sizing: border-box;
 
     .imageShower {

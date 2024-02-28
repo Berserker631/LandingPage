@@ -21,10 +21,8 @@ export class ImageSliderComponent implements OnInit {
 
   arSlides = [
     {url: '../../assets/banner5.png', title: 'portrait'},
-    // {url: '../../assets/banner4.png', title: 'Benefits'},
-    // {url: '../../assets/banner2.png', title: 'Chart'},
-    // {url: '../../assets/banner3.png', title: 'Worker'},
-    {url: '../../assets/banner1.png', title: 'TimeIsMoney'}
+    // {url: '../../assets/banner2.png', title: 'money'},
+    // {url: '../../assets/banner1.png', title: 'TimeIsMoney'}
   ]
   constructor() { }
 

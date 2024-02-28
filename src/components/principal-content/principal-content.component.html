@@ -1,48 +1,66 @@
+<br>
 <div class="wrapper">
-  <div class="container1">
-    <br>
-    <div class="content-1">
-      <div class="text">
-        <h2 style="text-align: start; padding-left: 10px; color: rgb(187, 114, 255); font-weight: 500;">Our story</h2>
-        <h1>What is Hickory Industries?</h1>
-        <h2 class="leyend">A US Company, Hickory Industries LLC is the parent company and sole owner of Hickory
-          Manufacturing DR, SRL. Hickory Industries provides a domestic face to world
-          class nearshore cut and sew services. Our customers are among the top US furniture manufacturers. With
-          operations beginning in 2007 in Nicaragua and our move to the
-          Dominican Republic in 2021 we have become indispensable to our customers by helping them grow in the face of
-          domestic labor shortages and growing problems with
-          international logistics. Hickory Industries’ products can be found in leading national home furnishings stores
-          and showrooms throughout the US and beyond.</h2>
-      </div>
-      <img src="../../assets/Sofa.png" alt="">
+  <div class="content-1">
+    <div class="text">
+      <h2 style="text-align: start; padding-left: 10px; color: rgb(187, 114, 255); font-weight: 500;">Our story</h2>
+      <h1>What is Hickory Industries?</h1>
+      <h2 class="leyend">A US Company, Hickory Industries LLC is the parent company and sole owner of Hickory
+        Manufacturing DR, SRL. Hickory Industries provides a domestic face to world
+        class nearshore cut and sew services. Our customers are among the top US furniture manufacturers. With
+        operations beginning in 2007 in Nicaragua and our move to the
+        Dominican Republic in 2021 we have become indispensable to our customers by helping them grow in the face of
+        domestic labor shortages and growing problems with
+        international logistics. Hickory Industries’ products can be found in leading national home furnishings stores
+        and showrooms throughout the US and beyond.</h2>
     </div>
+    <img src="../../assets/Sofa.png" alt="">
   </div>
-  <div class="container" style="margin: 2em 0; padding: 0">
-    <ng-container *ngFor="let e of [1]">
-      <panning-container class="row" #panner="panning-container">
-        <ng-container>
-          @for (item of images; track $index) {
-          <ng-container *panningItem >
-            <div class="item" [ngClass]="{ current: $index === panner.currentIndex }"  (click)="updatePosition($event, $index)"  (click)="panner.shift(1)">
-              <img class="slide-img" [src]="item.src" [alt]="item.alt" [ngClass]="{
+</div>
+<br>
+<br>
+<div class="container">
+  <panning-container #panner="panning-container">
+    @for (item of images; track $index) {
+    <ng-container *panningItem>
+      <div class="item" [ngClass]="{ current: $index === panner.currentIndex }" (click)="updatePosition($event, $index)"
+        (click)="panner.shift(1)">
+        <img class="slide-img" [src]="item.src" [alt]="item.alt" [ngClass]="{
                     'current': selectedImage == $index,
                     'next': selectedImage > $index,
                     'prev': selectedImage < $index,
                   }
                   ">
-            </div>
-          </ng-container>
-          }
-        </ng-container>
-      </panning-container>
-      <!-- <div style=" display: flex; flex-direction: row;">
-          <button (click)="panner.shift(-1)" class="btn btn-default col-xs-3">
-            Prev
-          </button>
-           <button (click)="panner.shift(1)" class="btn btn-default col-xs-3">
-            Next
-          </button>
-        </div> -->
+      </div>
     </ng-container>
-  </div>
+    }
+  </panning-container>
 </div>
+<br>
+<br>
+<!-- <div class="winners">
+  <h1 class="title">Winners of the week</h1>
+  <div>
+    <div class="mainWorkers">
+      <div class="second">
+        <img src="../../assets/normalPerson3.png" alt="normalPerson">
+        <p>Normal person 1</p>
+      </div>
+      <div class="first">
+        <img class="firstWinner" src="../../assets/winers.svg" alt="winner">
+        <img src="../../assets/normalPerson1.jpeg" class="photoWinner" alt="normalPerson">
+
+      </div>
+      <div class="third">
+        <img src="../../assets/normalPerson2.jpg" alt="normalPerson">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="score">
+    <h1>{{winner.name}}</h1>
+    <h2>Production bonus: {{winner.bonus| currency}}</h2>
+    <h2>Attendance bonus: {{winner.attendance | currency}}</h2>
+    <h2>Summarized bonus: {{winner.summarized| currency}}</h2>
+    <h2>Total earned: {{winner.total | currency}}</h2>
+  </div>
+</div> -->

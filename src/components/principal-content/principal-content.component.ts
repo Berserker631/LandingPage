@@ -11,11 +11,11 @@ import { PanningModule } from "../../directives/panning.module";
 export class PrincipalContentComponent implements OnInit {
   selectedImage: number = 0;
   images: any | undefined = [
+    {src: "../../assets/cuero.png", alt:"leatherCutters"},
     {src: "../../assets/announcment.png", alt:"announcment"},
-    {src: "../../assets/leather.jpg", alt:"announcment"},
-    {src: "../../assets/people.png", alt:"announcment"},
-    {src: "../../assets/Sofa.png", alt:"announcment"},
-    {src: "../../assets/announcment.png", alt:"announcment"},
+    {src: "../../assets/benefits.png", alt:"benefits"},
+    {src: "../../assets/employeeOfWeek.png", alt:"winner"},
+    {src: "../../assets/cuero.png", alt:"announcment"},
   ];
   winner = {
     name: 'Elbanerys Luciano',
@@ -28,8 +28,6 @@ export class PrincipalContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
-  ngOnInit() {
-  }
 
   updatePosition($event: any, index: number){
     if (this.selectedImage == this.images.length - 1 ) {
@@ -38,7 +36,5 @@ export class PrincipalContentComponent implements OnInit {
     else{
       this.selectedImage++;
     }
-    console.log(this.selectedImage);
-
   }
 }
