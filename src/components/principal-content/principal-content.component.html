@@ -1,22 +1,48 @@
 <div class="wrapper">
-  <div class="container">
+  <div class="container1">
     <br>
     <div class="content-1">
       <div class="text">
         <h2 style="text-align: start; padding-left: 10px; color: rgb(187, 114, 255); font-weight: 500;">Our story</h2>
         <h1>What is Hickory Industries?</h1>
-        <h2 class="leyend">A US Company, Hickory Industries LLC is the parent company and sole owner of Hickory Manufacturing DR, SRL. Hickory Industries provides a domestic face to world
-          class nearshore cut and sew services. Our customers are among the top US furniture manufacturers. With operations beginning in 2007 in Nicaragua and our move to the
-            Dominican Republic in 2021 we have become indispensable to our customers by helping them grow in the face of domestic labor shortages and growing problems with
-            international logistics. Hickory Industries’ products can be found in leading national home furnishings stores and showrooms throughout the US and beyond.</h2>
-          </div>
-        <img src="../../assets/Sofa.png" alt="">
-    </div>
-    <div class="content-2">
-      <div class="image-slider" id="inner-slider">
-        @for (image of images; track $index) {
-          <img [src]="image.src" [alt]="image.alt" (click)="reposition($event, $index)">
-        }
+        <h2 class="leyend">A US Company, Hickory Industries LLC is the parent company and sole owner of Hickory
+          Manufacturing DR, SRL. Hickory Industries provides a domestic face to world
+          class nearshore cut and sew services. Our customers are among the top US furniture manufacturers. With
+          operations beginning in 2007 in Nicaragua and our move to the
+          Dominican Republic in 2021 we have become indispensable to our customers by helping them grow in the face of
+          domestic labor shortages and growing problems with
+          international logistics. Hickory Industries’ products can be found in leading national home furnishings stores
+          and showrooms throughout the US and beyond.</h2>
       </div>
+      <img src="../../assets/Sofa.png" alt="">
+    </div>
+  </div>
+  <div class="container" style="margin: 2em 0; padding: 0">
+    <ng-container *ngFor="let e of [1]">
+      <panning-container class="row" #panner="panning-container">
+        <ng-container>
+          @for (item of images; track $index) {
+          <ng-container *panningItem >
+            <div class="item" [ngClass]="{ current: $index === panner.currentIndex }"  (click)="updatePosition($event, $index)"  (click)="panner.shift(1)">
+              <img class="slide-img" [src]="item.src" [alt]="item.alt" [ngClass]="{
+                    'current': selectedImage == $index,
+                    'next': selectedImage > $index,
+                    'prev': selectedImage < $index,
+                  }
+                  ">
+            </div>
+          </ng-container>
+          }
+        </ng-container>
+      </panning-container>
+      <!-- <div style=" display: flex; flex-direction: row;">
+          <button (click)="panner.shift(-1)" class="btn btn-default col-xs-3">
+            Prev
+          </button>
+           <button (click)="panner.shift(1)" class="btn btn-default col-xs-3">
+            Next
+          </button>
+        </div> -->
+    </ng-container>
   </div>
 </div>
