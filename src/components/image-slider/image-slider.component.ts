@@ -2,33 +2,28 @@ import { CommonModule } from "@angular/common";
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-
 @Component({
   standalone: true,
   imports: [RouterOutlet, CommonModule, MatIconModule],
   selector: 'app-image-slider',
   templateUrl: './image-slider.component.html',
   styleUrls: ['./image-slider.component.scss'],
-  animations: [
-    trigger('slide', [
-
-    ])
-  ]
 })
 export class ImageSliderComponent implements OnInit {
   vaCurrentSlide: number = 0;
-
   arSlides = [
-    {url: '../../assets/banner5.png', title: 'portrait'},
-    {url: '../../assets/banner3.png', title: 'leathers', leyend: {
+    {url: '../../assets/banner5.jpg', title: 'portrait'},
+    {url: '../../assets/banner3.jpg', title: 'leathers', leyend: {
       header: '¿Quieres Trabajar?',
       body: 'Estamos ingresando Personal en todas las areas, no necesitas experiencia, nosotros te capacitamos. Todos los beneficios de ley, nuestros horarios es de lunes a viernes de 7:30 AM a 5:00 PM, Tenemos transporte gratis para el personal',
       footer: 'Interesados solo'
     }},
-    // {url: '../../assets/banner1.png', title: 'TimeIsMoney'}
+    {url: '../../assets/banner1.jpg', title: 'experience', leyend: {
+      header: '¿No tienes experiencia?',
+      body: 'Nosotros te capacitamos!',
+      footer: 'Interesados solo'
+    }},
   ]
-  constructor() { }
 
   ngOnInit() {
     this.onChangeImage();

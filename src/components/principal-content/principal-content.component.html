@@ -1,7 +1,7 @@
 <br>
 <div class="wrapper">
-  <div class="content-1">
-    <div class="text">
+  <div class="container-1">
+    <div>
       <h2 style="text-align: start; padding-left: 10px; color: rgb(187, 114, 255); font-weight: 500;">Our story</h2>
       <h1>What is Hickory Industries?</h1>
       <h2 class="leyend">A US Company, Hickory Industries LLC is the parent company and sole owner of Hickory
@@ -13,14 +13,13 @@
         international logistics. Hickory Industries’ products can be found in leading national home furnishings stores
         and showrooms throughout the US and beyond.</h2>
     </div>
-    <img src="../../assets/Sofa.png" alt="">
+    <img src="../../assets/Sofa.png" alt="Sofa">
   </div>
 </div>
 <br>
-<br>
-<div class="container">
+<div class="container-2">
   <panning-container #panner="panning-container">
-    @for (item of images; track $index) {
+    @for (item of arImages; track $index) {
     <ng-container *panningItem>
       <div class="item" [ngClass]="{ current: $index === panner.currentIndex }" (click)="updatePosition($event, $index)"
         (click)="panner.shift(1)">
@@ -36,7 +35,7 @@
   </panning-container>
 </div>
 <br>
-<div class="container2">
+<div class="container-3">
   <div class="content-1">
     <div class="map">
       <iframe

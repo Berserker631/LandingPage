@@ -10,12 +10,12 @@ import { PanningModule } from "../../directives/panning.module";
 })
 export class PrincipalContentComponent implements OnInit {
   selectedImage: number = 0;
-  images: any | undefined = [
+  arImages: any | undefined = [
     {src: "../../assets/cuero.png", alt:"leatherCutters"},
     {src: "../../assets/announcment.png", alt:"announcment"},
     {src: "../../assets/benefits.png", alt:"benefits"},
     {src: "../../assets/employeeOfWeek.png", alt:"winner"},
-    {src: "../../assets/leathers.png", alt:"leathers"},
+    {src: "../../assets/leathers.jpg", alt:"leathers"},
   ];
   winner = {
     name: 'Elbanerys Luciano',
@@ -30,7 +30,7 @@ export class PrincipalContentComponent implements OnInit {
   ngOnInit() {}
 
   updatePosition($event: any, index: number){
-    if (this.selectedImage == this.images.length - 1 ) {
+    if (this.selectedImage == this.arImages.length - 1 ) {
       this.selectedImage = 0;
     }
     else{

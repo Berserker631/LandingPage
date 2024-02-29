@@ -11,6 +11,5 @@ import { PrincipalContentComponent } from "../components/principal-content/princ
 })
 export class AppComponent implements OnInit{
   title = 'landingPage';
-
   ngOnInit(): void {}
 }

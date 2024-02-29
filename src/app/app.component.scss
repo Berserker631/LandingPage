@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   width: 100vw;
   height: 100vh;
@@ -9,7 +13,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   height: fit-content;
   width: 100%;
   margin: 0;
@@ -25,11 +28,9 @@
     top: 0;
     padding: 5px;
     z-index: 3;
-    box-sizing: border-box;
     box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.4);
     border-bottom: solid 1px #575757;
     background-color: #1a1a1a;
-    box-sizing: border-box;
 
     .container {
       margin: 2px;
@@ -40,7 +41,7 @@
       justify-content: space-between;
 
       .logoContainer {
-        object-fit: cover;
+        object-fit: scale-down;
       }
 
       .actionButtons {
@@ -54,8 +55,12 @@
           font-family: "Roboto", sans-serif;
           font-weight: 550;
           font-style: normal;
-          color: #0f67af;
+          color: #c4c4c4;
           text-decoration: none;
+
+          &:hover{
+            color: #fff;
+          }
         }
 
         #hickory {
@@ -68,6 +73,10 @@
           width: 140px;
           height: 50px;
           box-shadow: 1px 3px 2px 0px rgba($color: #000000, $alpha: 0.3);
+
+          &:hover{
+            background-color: #1078ce;
+          }
         }
       }
     }
@@ -78,16 +87,14 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    // padding:0 5px 0 5px;
     box-sizing: border-box;
 
-    .imageShower {
+    .imageSlider {
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 100%;
       height: 100%;
-      box-sizing: border-box;
 
       .break-page {
         img {
@@ -144,27 +151,42 @@
     }
   }
 
-
-
-
   .footer {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     padding: 10px;
     width: 100%;
-    height: 100px;
+    height: fit-content;
     background-color: #202020;
     color: #ffffff;
-    box-sizing: border-box;
 
-    img{
-      width: 150px;
+    .footer-left{
+      height: 100px;
+      width: 500px;
+
+      img{
+        object-fit: cover;
+        height: 65px;
+      }
+
+      p {
+        text-align: start;
+        font-size: medium;
+      }
     }
 
-    p {
-      text-align: center;
-      font-size: medium;
+    .footer-right{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 500px;
+      height: 100px;
+
+      p {
+        text-align: end;
+        font-size: large;
+      }
     }
   }
 }
