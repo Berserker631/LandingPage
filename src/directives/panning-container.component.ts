@@ -63,12 +63,6 @@ export class PanningContainerComponent implements AfterViewInit {
 
   // Inputs
   private timing = '250ms cubic-bezier(0.33, 1, 0.68, 1)';
-
-  // Internals
-
-  /**
-   * The width of the items in this list. It is assumed that they are all the same size.
-   */
   private itemWidth: number = 0;
 
   get firstItemWidth() {
@@ -76,10 +70,6 @@ export class PanningContainerComponent implements AfterViewInit {
   }
 
   containerWidth = '0px';
-
-  /**
-   * The slide that we are currently on
-   */
   private currentSlide = 0;
 
   /**

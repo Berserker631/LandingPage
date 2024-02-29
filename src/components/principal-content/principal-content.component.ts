@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PanningModule } from "../../directives/panning.module";
+
 @Component({
   selector: 'app-principal-content',
   templateUrl: './principal-content.component.html',
@@ -15,7 +16,7 @@ export class PrincipalContentComponent implements OnInit {
     {src: "../../assets/announcment.png", alt:"announcment"},
     {src: "../../assets/benefits.png", alt:"benefits"},
     {src: "../../assets/employeeOfWeek.png", alt:"winner"},
-    {src: "../../assets/leathers.jpg", alt:"leathers"},
+    // {src: "../../assets/leathers.jpg", alt:"leathers"},
   ];
   winner = {
     name: 'Elbanerys Luciano',

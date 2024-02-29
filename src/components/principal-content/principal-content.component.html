@@ -17,6 +17,7 @@
   </div>
 </div>
 <br>
+<br>
 <div class="container-2">
   <panning-container #panner="panning-container">
     @for (item of arImages; track $index) {
@@ -24,7 +25,7 @@
       <div class="item" [ngClass]="{ current: $index === panner.currentIndex }" (click)="updatePosition($event, $index)"
         (click)="panner.shift(1)">
         <img class="slide-img" [src]="item.src" [alt]="item.alt" [ngClass]="{
-                    'current': selectedImage == $index,
+                    'current': selectedImage == $index -1,
                     'next': selectedImage > $index,
                     'prev': selectedImage < $index,
                   }
@@ -34,6 +35,7 @@
     }
   </panning-container>
 </div>
+<br>
 <br>
 <div class="container-3">
   <div class="content-1">
@@ -49,9 +51,18 @@
     </div>
   </div>
   <div class="content-2">
-
+    <img src="../../assets/Hickory.jpg" alt="Hickory">
+    <div class="description">
+      <h2>Conoce de Nosotros</h2>
+      <h3>Conoce sobre nuestra mision y vision, instalaciones y equipo de trabajo</h3>
+    </div>
   </div>
   <div class="content-3">
+    <img src="../../assets/logoLeather.png" alt="">
+    <div class="description">
+    <h2>[Texto de ejemplo]</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ut est facere a consequatur sequi quibusdam suscipit reprehenderit laborum. Quidem placeat excepturi qui minima aspernatur cumque repellendus a dignissimos eaque.</h3>
+    </div>
   </div>
 </div>
 <br>

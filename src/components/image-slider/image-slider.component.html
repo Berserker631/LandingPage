@@ -7,8 +7,8 @@
     @if ($index === vaCurrentSlide) {
       @if (slide.leyend) {
         <div class="leyend">
-        <h1>{{slide.leyend.header}}</h1>
-        <h2>{{slide.leyend.body}}</h2>
+        <h1 [ngClass]="{'main': slide.first}">{{slide.leyend.header}}</h1>
+        <p [ngClass]="{'subtitle': slide.first}">{{slide.leyend.body}}</p>
         <h3>{{slide.leyend.footer}}</h3>
         <button class="contact">Contactanos</button>
         </div>

@@ -27,7 +27,7 @@
     width: 100%;
     top: 0;
     padding: 5px;
-    z-index: 3;
+    z-index: 4;
     box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.4);
     border-bottom: solid 1px #575757;
     background-color: #1a1a1a;
@@ -163,7 +163,7 @@
 
     .footer-left{
       height: 100px;
-      width: 500px;
+      width: 100%;
 
       img{
         object-fit: cover;
@@ -171,6 +171,7 @@
       }
 
       p {
+        padding-top: 3px;
         text-align: start;
         font-size: medium;
       }
@@ -185,8 +186,9 @@
 
       p {
         text-align: end;
-        font-size: large;
+        font-size: medium;
       }
     }
   }
 }
+
