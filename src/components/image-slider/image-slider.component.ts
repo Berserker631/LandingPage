@@ -21,7 +21,11 @@ export class ImageSliderComponent implements OnInit {
 
   arSlides = [
     {url: '../../assets/banner5.png', title: 'portrait'},
-    // {url: '../../assets/banner2.png', title: 'money'},
+    {url: '../../assets/banner3.png', title: 'leathers', leyend: {
+      header: '¿Quieres Trabajar?',
+      body: 'Estamos ingresando Personal en todas las areas, no necesitas experiencia, nosotros te capacitamos. Todos los beneficios de ley, nuestros horarios es de lunes a viernes de 7:30 AM a 5:00 PM, Tenemos transporte gratis para el personal',
+      footer: 'Interesados solo'
+    }},
     // {url: '../../assets/banner1.png', title: 'TimeIsMoney'}
   ]
   constructor() { }
