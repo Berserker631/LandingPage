@@ -15,7 +15,7 @@ export class PrincipalContentComponent implements OnInit {
     {src: "../../assets/cuero.png", alt:"leatherCutters"},
     {src: "../../assets/announcment.png", alt:"announcment"},
     {src: "../../assets/benefits.png", alt:"benefits"},
-    {src: "../../assets/employeeOfWeek.png", alt:"winner"},
+    {src: "../../assets/Winner.jpg", alt:"winner"},
     // {src: "../../assets/leathers.jpg", alt:"leathers"},
   ];
   winner = {
