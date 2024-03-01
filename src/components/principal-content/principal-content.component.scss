@@ -228,7 +228,7 @@
   background-image: url('../../assets/leather5.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position: center;
   #page1 {
     top: 0;
     left: 0;
@@ -242,7 +242,7 @@
     transition: all ease-in-out .5s;
     background-size: cover;
 
-    .container-1 {
+    .container-1lt {
       background-color: rgba($color: #000000, $alpha: 0.3);
       color: #fff;
       width: 30%;
@@ -260,7 +260,7 @@
     }
 
     &:hover {
-      .container-1 {
+      .container-1lt {
         transform: translateY(50%);
       }
     }
@@ -279,6 +279,30 @@
     box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
     transition: all ease-in-out .5s;
     background-size: cover;
+
+    .container-2lt {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      color: #fff;
+      width: 30%;
+      height: 50%;
+      margin: 25px;
+      padding: 10px;
+      border-radius: 15px;
+      transform: translateY(200%);
+      transition: all ease-in-out .5s;
+
+      h1 {
+        font-family: "Merriweather", serif;
+        font-size: xx-large;
+      }
+
+    }
+
+    &:hover {
+      .container-2lt {
+        transform: translateY(50%);
+      }
+    }
   }
 
   #page3 {
@@ -293,6 +317,30 @@
     box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
     transition: all ease-in-out .5s;
     background-size: cover;
+
+    .container-3lt {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      color: #fff;
+      width: 30%;
+      height: 50%;
+      margin: 25px;
+      padding: 10px;
+      border-radius: 15px;
+      transform: translateY(200%);
+      transition: all ease-in-out .5s;
+
+      h1 {
+        font-family: "Merriweather", serif;
+        font-size: xx-large;
+      }
+
+    }
+
+    &:hover {
+      .container-3lt {
+        transform: translateY(50%);
+      }
+    }
   }
 
   #page4 {
@@ -307,6 +355,30 @@
     box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
     transition: all ease-in-out .5s;
     background-size: cover;
+
+    .container-4lt {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      color: #fff;
+      width: 30%;
+      height: 50%;
+      margin: 25px;
+      padding: 10px;
+      border-radius: 15px;
+      transform: translateY(200%);
+      transition: all ease-in-out .5s;
+
+      h1 {
+        font-family: "Merriweather", serif;
+        font-size: xx-large;
+      }
+
+    }
+
+    &:hover {
+      .container-4lt {
+        transform: translateY(50%);
+      }
+    }
   }
 }
 
