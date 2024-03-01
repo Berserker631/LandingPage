@@ -1,7 +1,7 @@
 <div class="wrapper">
  <header class="header">
     <div class="container">
-      <img class="logoContainer" src="./../assets/logoHickory.png" alt="logoHickory">
+      <img class="logoContainer" src="./../assets/HickoryIndustries.svg" alt="logoHickory">
       <div class="actionButtons">
         <a href="https://www.hickoryindustries.com">About Us</a>
         <a href=" https://wa.me/18097542316">Contact Us</a>
@@ -46,9 +46,9 @@
       <p>Copyright © Hickory Industries, LLC All rights Reserved 2021</p>
     </div>
     <div class="footer-right">
-      <p>{{ 'G.mena@HickoryIndustries.com' }}</p>
-      <p>Tel: (829)-762-8364</p>
-      <p>(809)-754-2316</p>
+      <p (click)="onCopyToClipboard($event)">{{ 'G.mena@HickoryIndustries.com' }}</p>
+      <p id="telNumber" (click)="onCopyToClipboard($event)">(829)-762-8364</p>
+      <p (click)="onCopyToClipboard($event)">(809)-754-2316</p>
     </div>
   </footer>
 </div>

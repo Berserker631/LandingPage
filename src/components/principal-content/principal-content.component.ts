@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Host, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PanningModule } from "../../directives/panning.module";
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-principal-content',
@@ -9,6 +10,7 @@ import { PanningModule } from "../../directives/panning.module";
   standalone: true,
   imports: [PanningModule, CommonModule]
 })
+@HostListener('window: scroll', ['$event'])
 export class PrincipalContentComponent implements OnInit {
   selectedImage: number = 0;
   arImages: any | undefined = [
@@ -16,16 +18,13 @@ export class PrincipalContentComponent implements OnInit {
     {src: "../../assets/announcment.png", alt:"announcment"},
     {src: "../../assets/benefits.png", alt:"benefits"},
     {src: "../../assets/Winner.jpg", alt:"winner"},
-    // {src: "../../assets/leathers.jpg", alt:"leathers"},
-  ];
-  winner = {
-    name: 'Elbanerys Luciano',
-    totalProduced: 6769.77,
-    bonus: 1353.95,
-    attendance: 200,
-    total: 700,
-    summarized: 9023.72
+    ];
+
+  onScroll($event: any){
+    console.log($event);
+
   }
+
   constructor() { }
 
   ngOnInit() {}
@@ -38,4 +37,12 @@ export class PrincipalContentComponent implements OnInit {
       this.selectedImage++;
     }
   }
+
+  changeSlider($event: any){
+    let currentImg =  $event.target;
+    // console.log($event.target);
+    // currentImg!.style.transition = "all ease-in-out .5s";
+    currentImg!.style.transform = "translateX(-110%)";
+  }
+
 }
