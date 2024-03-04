@@ -12,10 +12,10 @@ import {MatIconModule} from '@angular/material/icon';
 export class ImageSliderComponent implements OnInit {
   vaCurrentSlide: number = 0;
   arSlides = [
-    {url: '../../assets/banner5.jpg', title: 'portrait', leyend: {header: 'Hickory Industries', body: 'FABRIC & LEATHER COVERS COMPANY'}, first: true},
+    {url: '../../assets/banner5.jpg', title: 'portrait', leyend: {header: 'Hickory Industries', body: 'LEATHER AND FABRIC COVERS INDUSTRY'}, first: true},
     {url: '../../assets/banner3.jpg', title: 'leathers', leyend: {
       header: '¿Quieres Trabajar?',
-      body: 'Estamos ingresando Personal en todas las areas, no necesitas experiencia, nosotros te capacitamos. Todos los beneficios de ley, nuestros horarios es de lunes a viernes de 7:30 AM a 5:00 PM, Tenemos transporte gratis para el personal',
+      body: 'Estamos ingresando Personal en todas las areas, no necesitas experiencia, tenemos horarios flexibles, nosotros te capacitamos. Todos los beneficios de ley, Tenemos transporte gratis para el personal!',
       footer: 'Interesados solo'
     }},
     {url: '../../assets/banner1.jpg', title: 'experience', leyend: {

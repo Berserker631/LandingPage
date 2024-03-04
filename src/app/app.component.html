@@ -1,43 +1,39 @@
 <div class="wrapper">
- <header class="header">
-    <div class="container">
-      <img class="logoContainer" src="./../assets/HickoryIndustries.svg" alt="logoHickory">
-      <div class="actionButtons">
-        <a href="https://www.hickoryindustries.com">About Us</a>
-        <a href=" https://wa.me/18097542316">Contact Us</a>
-        <a id="hickory" href="https://hickoryindustries.com/#/login-form">Hickory Online</a>
-      </div>
-    </div>
+  <header class="header">
+    <app-header-component></app-header-component>
   </header>
-  <body class="body">
+
+  <body class="body" #scrollElement>
     <div class="imageSlider">
       <app-image-slider></app-image-slider>
-      <br>
+    </div>
+    <br>
+    <div class="principal-content">
       <app-principal-content></app-principal-content>
-      <!-- <div class="break-page">
+    </div>
+    <!-- <div class="break-page">
         <img src="../assets/ripped.png" alt="ripped">
         <br>
       </div> -->
-      <br>
-        <article>
-          <div class="carrousel">
-            <ul>
-              <li><img src="../assets/Fairfield.png" alt="Fairfield"></li>
-              <li><img src="../assets/mccreary.png" alt="McCreary"></li>
-              <li><img src="../assets/Pollywood.png" alt="McCreary"></li>
-              <li><img src="../assets/woodhaven.png" alt="McCreary"></li>
-            </ul>
-          </div>
-          <div class="carrousel">
-            <ul>
-              <li><img src="../assets/Fairfield.png" alt="Fairfield"></li>
-              <li><img src="../assets/mccreary.png" alt="McCreary"></li>
-              <li><img src="../assets/Pollywood.png" alt="McCreary"></li>
-              <li><img src="../assets/woodhaven.png" alt="McCreary"></li>
-            </ul>
-          </div>
-        </article>
+    <br>
+    <article>
+      <div class="carrousel">
+        <ul>
+          <li><img src="../assets/Fairfield.png" alt="Fairfield"></li>
+          <li><img src="../assets/mccreary.png" alt="McCreary"></li>
+          <li><img src="../assets/Pollywood.png" alt="McCreary"></li>
+          <li><img src="../assets/woodhaven.png" alt="McCreary"></li>
+        </ul>
       </div>
+      <div class="carrousel">
+        <ul>
+          <li><img src="../assets/Fairfield.png" alt="Fairfield"></li>
+          <li><img src="../assets/mccreary.png" alt="McCreary"></li>
+          <li><img src="../assets/Pollywood.png" alt="McCreary"></li>
+          <li><img src="../assets/woodhaven.png" alt="McCreary"></li>
+        </ul>
+      </div>
+    </article>
   </body>
   <br>
   <footer class="footer">

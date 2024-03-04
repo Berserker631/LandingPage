@@ -22,73 +22,21 @@
 
   .header {
     display: flex;
-    position: sticky;
     align-items: center;
+    position: sticky;
     height: 80px;
-    width: 100%;
     top: 0;
-    padding: 5px;
     z-index: 4;
     background-color: #272727;
     box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.4);
     border-bottom: solid 1px #575757;
-
-    .container {
-      margin: 2px;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      .logoContainer {
-        width: 190px;
-        padding-left: 15px;
-        object-fit: scale-down;
-      }
-
-      .actionButtons {
-        display: flex;
-        align-items: center;
-
-        a {
-          text-align: center;
-          font-size: large;
-          margin-right: 15px;
-          font-family: "Roboto", sans-serif;
-          font-weight: 550;
-          font-style: normal;
-          color: #c4c4c4;
-          text-decoration: none;
-
-          &:hover{
-            color: #fff;
-          }
-        }
-
-        #hickory {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 5px;
-          color: #fff;
-          background-color: #0f67af;
-          width: 140px;
-          height: 45px;
-          box-shadow: 1px 3px 2px 0px rgba($color: #000000, $alpha: 0.3);
-          text-shadow: 1px 1px 1px black;
-
-          &:hover{
-            background-color: #1078ce;
-          }
-        }
-      }
-    }
+    overflow: hidden;
   }
 
   .body {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
@@ -108,10 +56,15 @@
       }
     }
 
+    .principal-content{
+      width: 95%;
+      // overflow: hidden;
+    }
+
     article {
       display: flex;
       position: relative;
-      left: 31%;
+      left: 0%;
       width: 700px;
       overflow: hidden;
 
