@@ -2,20 +2,19 @@ import { Component, Host, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PanningModule } from "../../directives/panning.module";
 import { HostListener } from '@angular/core';
-
+import { SliderShowLeatherComponent } from "../../components/sliderShow-leather/sliderShow-leather.component";
 @Component({
   selector: 'app-principal-content',
   templateUrl: './principal-content.component.html',
   styleUrls: ['./principal-content.component.scss'],
   standalone: true,
-  imports: [PanningModule, CommonModule]
+  imports: [PanningModule, CommonModule, SliderShowLeatherComponent]
 })
 @HostListener('window: scroll', ['$event'])
 export class PrincipalContentComponent implements OnInit {
   selectedImage: number = 0;
   arImages: any | undefined = [
     {src: "../../assets/cuero.png", alt:"leatherCutters"},
-    // {src: "../../assets/announcment.png", alt:"announcment"},
     {src: "../../assets/benefits.png", alt:"benefits"},
     {src: "../../assets/Rank1.jpg", alt:"winner"},
     {src: "../../assets/Rank2.jpg", alt:"winner"},
@@ -37,11 +36,5 @@ export class PrincipalContentComponent implements OnInit {
     }
   }
 
-  changeSlider($event: any){
-    let currentImg =  $event.target;
-    // console.log($event.target);
-    // currentImg!.style.transition = "all ease-in-out .5s";
-    currentImg!.style.transform = "translateX(-110%)";
-  }
 
 }

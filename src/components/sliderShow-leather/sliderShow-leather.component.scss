@@ -1,0 +1,128 @@
+#page1 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  z-index: 4;
+  background-image: url('../../assets/leather1.jpg');
+  background-repeat: no-repeat;
+  box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
+  transition: all ease-in-out .5s;
+  background-size: cover;
+
+  .cnt-1lt {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    color: #fff;
+    width: 30%;
+    height: 50%;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    transform: translateY(200%);
+    transition: all ease-in-out .5s;
+  }
+
+  &:hover {
+    .cnt-1lt {
+      transform: translateY(50%);
+    }
+  }
+
+}
+
+#page2 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 85%;
+  background-image: url('../../assets/leather2.jpg');
+  background-repeat: no-repeat;
+  z-index: 3;
+  box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
+  transition: all ease-in-out .5s;
+  background-size: cover;
+
+  .cnt-2lt {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    color: #fff;
+    width: 30%;
+    height: 50%;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    transform: translateY(200%);
+    transition: all ease-in-out .5s;
+  }
+
+  &:hover {
+    .cnt-2lt {
+      transform: translateY(50%);
+    }
+  }
+}
+
+#page3 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  background-image: url('../../assets/leather3.jpg');
+  background-repeat: no-repeat;
+  z-index: 2;
+  box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
+  transition: all ease-in-out .5s;
+  background-size: cover;
+
+  .cnt-3lt {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    color: #fff;
+    width: 30%;
+    height: 50%;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    transform: translateY(200%);
+    transition: all ease-in-out .5s;
+  }
+
+  &:hover {
+    .cnt-3lt {
+      transform: translateY(50%);
+    }
+  }
+}
+
+#page4 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 95%;
+  background-image: url('../../assets/leather4.jpg');
+  background-repeat: no-repeat;
+  z-index: 1;
+  box-shadow: 20px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
+  transition: all ease-in-out .5s;
+  background-size: cover;
+
+  .cnt-4lt {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    color: #fff;
+    width: 30%;
+    height: 50%;
+    margin: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    transform: translateY(200%);
+    transition: all ease-in-out .5s;
+  }
+
+  &:hover {
+    .cnt-4lt {
+      transform: translateY(50%);
+    }
+  }
+}
