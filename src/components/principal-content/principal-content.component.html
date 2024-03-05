@@ -1,8 +1,9 @@
-<div class="cnt-2">
+
+<div class="cnt-2" id="slidershow" #div>
   <panning-container #panner="panning-container">
     @for (item of arImages; track $index) {
     <ng-container *panningItem>
-      <div class="item" [ngClass]="{ current: $index === panner.currentIndex }" (click)="updatePosition($event, $index)"
+      <div class="item" [ngClass]="{ current: $index === panner.currentIndex }" (click)="updatePosition()"
         (click)="panner.shift(1)">
         <img class="slide-img" [src]="item.src" [alt]="item.alt" [ngClass]="{
                     'current': selectedImage == $index,
@@ -29,14 +30,14 @@
       <h3>Modulo A11, Caribbean Industrial Park, carretera matanzas, puñal o por la Av. Hispanoamericana</h3>
     </div>
   </div>
-  <div class="content-sm">
+  <div class="content-sm" (click)="redirect()">
     <img src="../../assets/Hickory.jpg" alt="Hickory">
     <div class="description">
       <h2>Conoce de Nosotros</h2>
       <h3>Conoce sobre nuestra mision y vision, instalaciones y equipo de trabajo</h3>
     </div>
   </div>
-  <div class="content-sm">
+  <div class="content-sm" (click)="redirect()">
     <img src="../../assets/Hikcowry.jpg" alt="">
     <div class="description">
       <h2>[Texto de ejemplo]</h2>

@@ -49,4 +49,5 @@ export class ImageSliderComponent implements OnInit {
     const next  = this.vaCurrentSlide + 1;
     this.vaCurrentSlide = next === this.arSlides.length ? 0 : next;
   }
+
 }

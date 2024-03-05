@@ -1,16 +1,17 @@
-import { Component, Host, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, OnInit  } from '@angular/core';
+import { Router } from "@angular/router";
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { PanningModule } from "../../directives/panning.module";
-import { HostListener } from '@angular/core';
 import { SliderShowLeatherComponent } from "../../components/sliderShow-leather/sliderShow-leather.component";
+import {MatIconModule} from '@angular/material/icon';
+
 @Component({
   selector: 'app-principal-content',
   templateUrl: './principal-content.component.html',
   styleUrls: ['./principal-content.component.scss'],
   standalone: true,
-  imports: [PanningModule, CommonModule, SliderShowLeatherComponent]
+  imports: [PanningModule, CommonModule, SliderShowLeatherComponent,MatIconModule],
 })
-@HostListener('window: scroll', ['$event'])
 export class PrincipalContentComponent implements OnInit {
   selectedImage: number = 0;
   arImages: any | undefined = [
@@ -19,15 +20,13 @@ export class PrincipalContentComponent implements OnInit {
     {src: "../../assets/Rank1.jpg", alt:"winner"},
     {src: "../../assets/Rank2.jpg", alt:"winner"},
     {src: "../../assets/Rank3.jpg", alt:"winner"},
-    ];
+  ];
 
-  onScroll($event: any){ }
-
-  constructor() { }
+  constructor(private router: Router, private readonly scroller: ViewportScroller) { }
 
   ngOnInit() {}
 
-  updatePosition($event: any, index: number){
+  updatePosition(){
     if (this.selectedImage == this.arImages.length - 1) {
       this.selectedImage = 0;
     }
@@ -36,5 +35,12 @@ export class PrincipalContentComponent implements OnInit {
     }
   }
 
+  @HostListener('window:scroll', ['$event'])
+  doSomething() {
+    // this.scroller.scrollToAnchor('slidershow')
+  }
 
+  redirect() {
+    this.router.navigate(['/NotFound']);
+  }
 }

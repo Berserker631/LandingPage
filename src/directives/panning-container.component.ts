@@ -62,7 +62,7 @@ export class PanningContainerComponent implements AfterViewInit {
   @ViewChild('wrapper') private wrapper!: ElementRef;
 
   // Inputs
-  private timing = '250ms cubic-bezier(0.33, 1, 0.68, 1)';
+  private timing = '800ms cubic-bezier(0.33, 1, 0.68, 1)';
   private itemWidth: number = 0;
 
   get firstItemWidth() {
