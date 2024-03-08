@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr repeat(2, 1fr);
+  background-color: #061c25;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+
+  .title-container{
+    grid-area: 1 / 1 / 2 / 3;
+    border-bottom: solid 1px #D0A85C;
+
+    h2{
+      font-family: "Beaufort for LOL italic";
+      font-style: italic;
+      font-size: 25px;
+      color: #fff;
+      text-align: center;
+      margin: 10px;
+    }
+
+    h1{
+      height: fit-content;
+      font-family: "Beaufort for LOL Bold";
+      font-style: italic;
+      font-weight: bold;
+      font-size: 50px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    grid-area: 2 / 1 / 4 / 2;
+
+    .qr-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 400px;
+      height: 450px;
+      border: solid 1px rgb(226, 226, 226);
+      box-shadow: -3px 5px 1px 1px rgba($color: #D0A85C, $alpha: 0.5);
+      padding: 10px;
+      margin: 0;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: #fff;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+
+      h1 {
+        margin-top: 15px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        font-size: xx-large;
+      }
+    }
+  }
+
+  .announcment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    grid-area: 2 / 2 / 4 / 3;
+    border-left: solid 1px #414141;
+
+    .requirements-container{
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      h1{
+        font-family: "Beaufort for LOL Bold";
+        font-size: 35px;
+        font-weight: bolder;
+        color: #fff;
+        text-align: center;
+      }
+
+      ul{
+        width: 100%;
+        list-style-type: none;
+
+        li{
+          display: flex;
+          align-items: center;
+          color: #fff;
+          font-size: x-large;
+          font-family: "Beaufort for LOL italic";
+          line-height: 3em;
+          font-weight: 400;
+          font-style: normal;
+
+          img{
+            padding-left: 15px;
+            width: 80%;
+          }
+
+          #hickory{
+            margin-top: 5%;
+            width: 30%;
+          }
+        }
+      }
+    }
+
+  }
+
+}

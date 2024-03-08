@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="kronos-container">
+    <div class="cronometro">
+      <p class="counter">{{date}}</p>
+    </div>
+  </div>
+  <div class="competitors_container">
+    @for (item of rivalsArray; track $index) {
+      <div class="competitors_dividers">
+        <img class="crown{{$index+1}}" src='../../../assets/HumanResources/Crown{{$index+1}}.svg' loading="lazy" alt="crown">
+        <div class="competitors_profile">
+          <img src="../../../assets/HumanResources/{{$index+1}}.jpg" alt="winner">
+        </div>
+        <div class="competitors_leyend">
+          <h1>{{item.name}}</h1>
+          <img src="../../../assets/HumanResources/dance{{$index+1}}.svg" alt="dance">
+        </div>
+        <div class="vote-counter">
+          <p>{{voteCounter + $index}}</p>
+        </div>
+      </div>
+    }
+  </div>
+  <img class="background" src="../../../assets/HumanResources/background.jpg" alt="background">
+</div>
