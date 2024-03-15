@@ -1,45 +1,112 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from "@angular/common"
+import * as confetti from 'canvas-confetti';
+import { Employee } from '../../../interfaces/Employee';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-participants-list',
   templateUrl: './participants-list.component.html',
   styleUrls: ['./participants-list.component.scss'],
-  standalone: true
+  standalone: true,
+  imports: [MatIconModule, CommonModule, HttpClientModule]
 })
 export class ParticipantsListComponent implements OnInit {
+  chosenParticipant: number = 0;
+  selectedEmployee: Employee = {
+    name: '',
+    area: ''
+  };
+  alreadyVote: boolean = false;
+  confirmSelection: boolean = false;
+  members: Employee[] = [];
+  index: number = 0;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  loadMembers(){
+    return this.http.get<any>(`http://192.168.21.52:3600/api/employee/`)
+  }
+
 
   ngOnInit() {
+    this.loadMembers().subscribe({
+      next: (response) => {
+        this.members = response;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+
     this.animateText();
+    this.alreadyVote = localStorage.getItem("voteAlready") === "true";
   }
 
   animateText() {
-    let txts = document.querySelector(".animate-text")!.children;
-    let txtsLen = txts.length;
-    let index = 0;
-    let textInTimer = 3000;
-    let textOutTimer = 2800;
+    const txts = document.querySelector(".animate-text")!.children;
+    const textInTimer = 3000;
+    const textOutTimer = 2800;
 
-    for (let i = 0; i < txtsLen; i++) {
+    for (let i = 0; i < txts.length; i++) {
       txts[i].classList.remove("text-in", "text-out");
     }
-    txts[index].classList.add("text-in");
+    txts[this.index].classList.add("text-in");
 
-    setTimeout(function () {
-      txts[index].classList.add("text-out");
+    setTimeout(() => {
+      txts[this.index].classList.add("text-out");
     }, textOutTimer)
 
-    setTimeout( () => {
-      if (index == txtsLen - 1) {
-        index = 0;
+    setTimeout(() => {
+      if (this.index == txts.length - 1) {
+        this.index = 0;
       }
       else {
-        index++;
-        this.animateText();
+        this.index++;
       }
+      this.animateText();
     }, textInTimer);
-    window.onload = this.animateText;
   }
 
+  celebrate() {
+    confetti.create()({
+      shapes: ['square'],
+      particleCount: 100,
+      spread: 90,
+      origin: {
+        y: 0
+      }
+    });
+  }
+
+  hideModal(response: boolean) {
+    if (response) {
+      this.confirmSelection = true;
+      // this.alreadyVote = true;
+      this.celebrate()
+      localStorage.setItem("voteAlready", "true");
+      this.voteFiltering(this.chosenParticipant)
+    }
+    else {
+      this.confirmSelection = false;
+    }
+    this.confirmSelection = false;
+  }
+
+  processVote($index: number, member: any) {
+    this.selectedEmployee.name = member.name;
+    this.selectedEmployee.area = member.area;
+    this.confirmSelection = true;
+    this.chosenParticipant = $index;
+  }
+
+  voteFiltering(employee: number) {
+    if (this.chosenParticipant > 0) {
+      return employee == this.chosenParticipant ? false : true;
+    }
+    else {
+      return false;
+    }
+  }
 }

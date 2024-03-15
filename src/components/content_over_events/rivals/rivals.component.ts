@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RivalsComponent implements OnInit {
   date: string = '';
   voteCounter: number = 0;
-  eventDate: number = new Date('2024-03-11').getTime();
+  eventDate: number = new Date('2024-03-30').getTime();
 
   rivalsArray = [
     {
@@ -42,18 +42,16 @@ export class RivalsComponent implements OnInit {
 
 
   initializeCronometer(){
-    if (Date.now() - this.eventDate) {
       let daysTime = (1000 * 60 * 60);
       setInterval(() => {
         let currentTime = new Date().getTime();
-        let timeLeft = currentTime - this.eventDate;
+        let timeLeft = this.eventDate - currentTime;
         let days = Math.floor(timeLeft / (daysTime * 24));
         let hours =  Math.floor(timeLeft % (daysTime * 24) / (daysTime));
         let minutes = Math.floor((timeLeft % daysTime) / (1000 * 60));
         let seconds = Math.floor((timeLeft % (1000*60)) / 1000);
         this.date = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
       }, 1000);
-    }
   }
 
 }

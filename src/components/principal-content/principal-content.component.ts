@@ -41,6 +41,9 @@ export class PrincipalContentComponent implements OnInit {
   }
 
   redirect() {
-    this.router.navigate(['/NotFound']);
+    this.router.navigate(['/vote']);
+  }
+  redirectTo() {
+    this.router.navigate(['/registration']);
   }
 }
