@@ -1,9 +1,0 @@
-<div class="wrapper">
-  <form class="form-register" (ngSubmit)="onSubmit()" >
-    <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="employeeCode" placeholder="Ingrese su Codigo de empleado" [required]="true" [(ngModel)]="employeeCode">
-    <input class="controls" type="text" name="employeeName" placeholder="Nombre del empleado" [disabled]="true" [required]="false" [(ngModel)]="employeeName">
-    <input class="controls" type="text" name="employeeArea" placeholder="Area del empleado" [disabled]="true" [required]="false" [(ngModel)]="employeeArea">
-    <input class="button" type="submit" value="Continuar" (submit)="navigateTo()">
-  </form>
-</div>

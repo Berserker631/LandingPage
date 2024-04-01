@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ImageSliderComponent } from '../image-slider/image-slider.component';
-import { PrincipalContentComponent } from "../principal-content/principal-content.component";
 import {Clipboard} from '@angular/cdk/clipboard';
 import { HeaderComponent } from "../header-component/header.component";
 
@@ -11,7 +10,7 @@ import { HeaderComponent } from "../header-component/header.component";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [RouterOutlet, ImageSliderComponent, PrincipalContentComponent, HeaderComponent]
+  imports: [RouterOutlet, ImageSliderComponent, HeaderComponent]
 })
 export class HomeComponent implements OnInit {
   headerOpacity: number = 1;
