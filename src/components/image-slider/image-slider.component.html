@@ -13,7 +13,7 @@
         <h1  class="big_Subtitle">{{slide.leyend.big_Subtitle}}</h1>
         <p class="lit_Subtitle">{{slide.leyend.lit_Subtitle}}</p>
         @if (slide.leyend.image) {
-          <img class="leyend_img" [src]="slide.leyend.image">
+          <img class="leyend_img" [src]="slide.leyend.image" loading="lazy">
         }
         <h3 class="footer">{{slide.leyend.footer}}</h3>
         </div>

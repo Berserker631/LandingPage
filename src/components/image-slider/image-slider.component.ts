@@ -18,24 +18,11 @@ export class ImageSliderComponent implements OnInit {
       title: 'leather-portrait',
       leyend: {
         big_Title: 'Hickory DR',
-        slogan: 'Aqui ganas mas!',
+        slogan: '',
         lit_Title: '',
         big_Subtitle: '',
         lit_Subtitle: '',
-        image: '',
-        footer: 'Aqui vives mejor!'
-      }
-    },
-
-    {
-      url: '../../assets/banner3.jpg',
-      title: 'leathers',
-      leyend: {
-        big_Title: '',
-        lit_Title: 'Estamos ingresando Personal',
-        big_Subtitle: '',
-        lit_Subtitle: 'No necesitas experiencia.',
-        image: '',
+        image: '../../assets/hw.gif',
         footer: ''
       }
     },
@@ -46,21 +33,7 @@ export class ImageSliderComponent implements OnInit {
       leyend: {
         big_Title: '',
         lit_Title: '¿No tienes experiencia?',
-        big_Subtitle: '',
-        lit_Subtitle: 'Nosotros te capacitamos',
-        image: '',
-        footer: ''
-      }
-    },
-
-    {
-      url: '../../assets/coconut.jpg',
-      title: 'coconut',
-      leyend: {
-        big_Title: '',
-        lit_Title: '',
-        slogan: '',
-        big_Subtitle: 'Consigue esas vacaciones soñadas',
+        big_Subtitle: 'Nosotros te capacitamos',
         lit_Subtitle: '',
         image: '',
         footer: ''
@@ -80,7 +53,7 @@ export class ImageSliderComponent implements OnInit {
       else {
         this.vaCurrentSlide = 0
       }
-    // }, 5000)
+    // }, 10000)
   }
 
   onPreviousClick() {

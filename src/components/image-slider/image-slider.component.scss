@@ -27,7 +27,7 @@
     height: fit-content;
     user-select: none;
     box-sizing: border-box;
-    z-index: 3;
+    z-index: 99;
 
     .left-arrow{
       box-sizing: border-box;
@@ -61,55 +61,67 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
 
     .big_Title {
       font-size: 9em;
       font-weight: 400;
-      color: #d6c8a3;
+      color: #ffe5a4;
+      z-index: 10;
       text-shadow: 3px 3px 2px black;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      grid-area: 2 / 1 / 4 / 6;
+      grid-area: 3 / 2 / 5 / 8;
     }
 
     .lit_Title {
       font-size: 5em;
       font-weight: 400;
+      z-index: 10;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-style: normal;
-      color: #ebe3cd;
+      color: #ffe5a4;
       text-shadow: 2px 2px 2px black;
-      grid-area: 2 / 1 / 4 / 6;
+      grid-area: 5 / 2 / 6 / 8;
+      line-height: 1em;
     }
 
     .slogan {
       font-size: 4.5em;
       font-family: "Satisfy", cursive;
       font-weight: 400;
+      z-index: 10;
       color: #ffffff;
       text-shadow: 2px 2px 2px black;
-      grid-area: 4 / 1 / 6 / 6;
+      grid-area: 7 / 2 / 9 / 8;
     }
 
     .big_Subtitle{
       color: #ececec;
       font-size: 3.5em;
+      z-index: 10;
       text-shadow: 2px 2px 2px black;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      grid-area: 6 / 1 / 8 / 6;
+      grid-area: 7 / 2 / 9 / 8;
+      line-height: 1em;
     }
 
     .lit_Subtitle{
       color: #ececec;
       font-size: 2.8em;
       text-shadow: 2px 2px 2px black;
+      z-index: 10;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      grid-area: 6 / 1 / 8 / 6;
+      grid-area: 7 / 2 / 9 / 8;
+      line-height: 1em;
     }
 
     .leyend_img{
-      grid-area: 4 / 1 / 8 / 6;
+      grid-area: 5 / 1 / 11 / 7;
+      transform: rotate(9deg);
+      border: none;
+      z-index: 10;
+      box-shadow: none;
     }
 
     .footer{
@@ -118,7 +130,7 @@
       font-weight: 400;
       color: #ffffff;
       text-shadow: 2px 2px 2px black;
-      grid-area: 8 / 1 / 9 / 6;
+      grid-area: 9 / 2 / 11 / 8;
     }
   }
 }
