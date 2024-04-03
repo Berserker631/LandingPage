@@ -46,14 +46,14 @@ export class ImageSliderComponent implements OnInit {
   }
 
   onChangeImage() {
-    // setInterval(() => {
+    setInterval(() => {
       if (this.vaCurrentSlide < this.arSlides.length - 1) {
         this.vaCurrentSlide++;
       }
       else {
         this.vaCurrentSlide = 0
       }
-    // }, 10000)
+    }, 10000)
   }
 
   onPreviousClick() {
