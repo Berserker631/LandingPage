@@ -7,5 +7,40 @@
     <div class="imageSlider">
       <app-image-slider></app-image-slider>
     </div>
+    <br>
+    <div class="principal-content">
+      <app-principal-content></app-principal-content>
+    </div>
+    <br>
+    <article>
+      <div class="carrousel">
+        <ul>
+          <li><img src="../assets/Fairfield.png" alt="Fairfield"></li>
+          <li><img src="../assets/mccreary.png" alt="McCreary"></li>
+          <li><img src="../assets/Pollywood.png" alt="McCreary"></li>
+          <li><img src="../assets/woodhaven.png" alt="McCreary"></li>
+        </ul>
+      </div>
+      <div class="carrousel">
+        <ul>
+          <li><img src="../assets/Fairfield.png" alt="Fairfield"></li>
+          <li><img src="../assets/mccreary.png" alt="McCreary"></li>
+          <li><img src="../assets/Pollywood.png" alt="McCreary"></li>
+          <li><img src="../assets/woodhaven.png" alt="McCreary"></li>
+        </ul>
+      </div>
+    </article>
   </body>
+  <br>
+  <footer class="footer">
+    <div class="footer-left">
+      <p>Copyright © Hickory Industries, LLC All rights Reserved 2021</p>
+      <img src="../assets/logoHickory.png" alt="logo">
+    </div>
+    <div class="footer-right">
+      <p (click)="onCopyToClipboard($event)">{{ 'G.mena@HickoryIndustries.com' }}</p>
+      <p id="telNumber" (click)="onCopyToClipboard($event)">(829)-762-8364</p>
+      <p (click)="onCopyToClipboard($event)">(809)-754-2316</p>
+    </div>
+  </footer>
 </div>

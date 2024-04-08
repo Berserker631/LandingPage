@@ -15,8 +15,7 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #272727;
@@ -25,7 +24,7 @@
     display: flex;
     align-items: center;
     position: sticky;
-    height: 7%;
+    height: 80px;
     top: 0;
     z-index: 4;
     background-color: #272727;
@@ -40,7 +39,6 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 85%;
     box-sizing: border-box;
 
     .imageSlider {

@@ -1,8 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
-
+import {MatIconModule} from '@angular/material/icon';
 @Component({
   standalone: true,
   imports: [RouterOutlet, CommonModule, MatIconModule],
@@ -13,83 +12,41 @@ import { MatIconModule } from '@angular/material/icon';
 export class ImageSliderComponent implements OnInit {
   vaCurrentSlide: number = 0;
   arSlides = [
-    {
-      url: '../../assets/banner5.jpg',
-      title: 'leather-portrait',
-      leyend: {
-        big_Title: 'Hickory DR',
-        slogan: 'Aqui ganas mas!',
-        lit_Title: '',
-        big_Subtitle: '',
-        lit_Subtitle: '',
-        image: '',
-        footer: 'Aqui vives mejor!'
-      }
-    },
-
-    {
-      url: '../../assets/banner3.jpg',
-      title: 'leathers',
-      leyend: {
-        big_Title: '',
-        lit_Title: 'Estamos ingresando Personal',
-        big_Subtitle: '',
-        lit_Subtitle: 'No necesitas experiencia.',
-        image: '',
-        footer: ''
-      }
-    },
-
-    {
-      url: '../../assets/banner1.jpg',
-      title: 'experience',
-      leyend: {
-        big_Title: '',
-        lit_Title: '¿No tienes experiencia?',
-        big_Subtitle: '',
-        lit_Subtitle: 'Nosotros te capacitamos',
-        image: '',
-        footer: ''
-      }
-    },
-
-    {
-      url: '../../assets/coconut.jpg',
-      title: 'coconut',
-      leyend: {
-        big_Title: '',
-        lit_Title: '',
-        slogan: '',
-        big_Subtitle: 'Consigue esas vacaciones soñadas',
-        lit_Subtitle: '',
-        image: '',
-        footer: ''
-      }
-    },
+    {url: '../../assets/banner5.jpg', title: 'portrait', leyend: {header: 'Hickory Industries', body: 'LEATHER AND FABRIC COVERS INDUSTRY'}, first: true},
+    {url: '../../assets/banner3.jpg', title: 'leathers', leyend: {
+      header: '¿Quieres Trabajar?',
+      body: 'Estamos ingresando Personal en todas las areas, no necesitas experiencia, tenemos horarios flexibles, nosotros te capacitamos. Todos los beneficios de ley, Tenemos transporte gratis para el personal!',
+      footer: 'Interesados solo'
+    }},
+    {url: '../../assets/banner1.jpg', title: 'experience', leyend: {
+      header: '¿No tienes experiencia?',
+      body: 'Nosotros te capacitamos!',
+      footer: 'Interesados solo'
+    }},
   ]
 
   ngOnInit() {
     this.onChangeImage();
   }
 
-  onChangeImage() {
-    // setInterval(() => {
+  onChangeImage(){
+    setInterval(()=>{
       if (this.vaCurrentSlide < this.arSlides.length - 1) {
         this.vaCurrentSlide++;
       }
       else {
         this.vaCurrentSlide = 0
       }
-    // }, 5000)
+    }, 5000)
   }
 
-  onPreviousClick() {
+  onPreviousClick(){
     const previous = this.vaCurrentSlide - 1;
     this.vaCurrentSlide = previous < 0 ? this.arSlides.length - 1 : previous
   }
 
-  onNextClick() {
-    const next = this.vaCurrentSlide + 1;
+  onNextClick(){
+    const next  = this.vaCurrentSlide + 1;
     this.vaCurrentSlide = next === this.arSlides.length ? 0 : next;
   }
 

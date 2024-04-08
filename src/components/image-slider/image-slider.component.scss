@@ -1,13 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
 .slideShow-container{
   display: flex;
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 850px;
   box-sizing: border-box;
 
   &::after{
@@ -16,7 +15,7 @@
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.3);
+    background-color: rgba($color: #000000, $alpha: 0.2);
   }
 
   .arrow-container{
@@ -49,11 +48,10 @@
 
   img{
     width: 100%;
-    height: 100vh;
     object-fit: cover;
     user-select: none;
     box-sizing: border-box;
-    box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.2);
+    box-shadow: -2px 5px 10px 0px rgba($color: #000000, $alpha: 0.4);
     border-bottom: solid 1px #8b8b8b;
   }
 
@@ -61,87 +59,64 @@
     width: 50%;
     height: fit-content;
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 5%;
+    padding: 15px;
     border-radius: 5px;
     z-index: 3;
 
-    .big_Title {
-      font-size: 9em;
-      width: 620px;
-      font-weight: 400;
-      line-height: 1em;
-      margin-bottom: 162px;
-      font-style: normal;
-      color: #d6c8a3;
-      text-shadow: 3px 3px 2px black;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-    }
+    .contact{
+      font-size: large;
+      background-color: #008cff;
+      width: 120px;
+      height: 40px;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
 
-    .lit_Title {
-      font-size: 4em;
-      padding-left: 10px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      &:hover{
+        cursor: pointer;
+        background-color: rgb(17, 137, 235);
+      }
+    }
+    .main{
+      font-size: xx-large;
+      font-family: "Merriweather", serif;
       font-weight: 400;
-      line-height: 1.5em;
       margin-bottom: 2px;
       font-style: normal;
-      color: #ebe3cd;
-      text-shadow: 2px 2px 2px black;
+      color: #d6c8a3;
+      text-shadow: 1px 1px 2px black;
     }
-
-    .slogan {
-      width: 417px;
-      font-size: 4.5em;
-      font-family: "Satisfy", cursive;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      line-height: 2.0em;
-      margin-left: 30px;
-      margin-bottom: 6px;
-      color: #ffffff;
-      text-shadow: 2px 2px 2px black;
-    }
-
-    .big_Subtitle{
-      color: #ececec;
-      font-size: 3.5em;
+    .subtitle{
+      width: 645px;
+      color: #fef7e6;
+      font-size: 45px;
+      font-weight: bold;
       word-wrap: break-word;
-      text-shadow: 2px 2px 2px black;
+      text-shadow: 1px 1px 2px black;
       line-height: 55px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+      height: 120px;
     }
-
-    .lit_Subtitle{
-      color: #ececec;
-      font-size: 2.8em;
-      word-wrap: break-word;
-      text-shadow: 2px 2px 2px black;
-      line-height: 55px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    h1{
+      color: #fff;
+      font-size: 45px;
+      text-align: start;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px black;
     }
-
-    .leyend_img{
-      max-width: 1000px;
-      height: 300px;
-      max-height: 500px;
+    p{
+      line-height: 30px;
+      font-size: 27px;
+      color: #fff;
+      text-align: justify;
+      text-shadow: 1px 1px 2px black;
     }
-
-    .footer{
-      width: 100%;
-      font-size: 4.5em;
-      font-family: "Satisfy", cursive;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      line-height: 2.0em;
-      margin-left: 53px;
-      margin-bottom: 6px;
-      color: #ffffff;
-      text-shadow: 2px 2px 2px black;
+    h3{
+      font-size: large;
+      color: #ffd2d2;
+      text-align: start;
+      text-shadow: 1px 1px 2px black;
     }
   }
 }

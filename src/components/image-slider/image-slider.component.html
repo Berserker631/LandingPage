@@ -4,18 +4,13 @@
     <mat-icon class="right-arrow" (click)="onNextClick()">keyboard_arrow_right</mat-icon>
   </div>
   @for (slide of arSlides; track $index) {
-    @if (vaCurrentSlide == $index) {
+    @if ($index === vaCurrentSlide) {
       @if (slide.leyend) {
         <div class="leyend">
-        <h1 class="big_Title">{{slide.leyend.big_Title}}</h1>
-        <h1 class="lit_Title">{{slide.leyend.lit_Title}}</h1>
-        <h1 class="slogan">{{slide.leyend.slogan}}</h1>
-        <h1  class="big_Subtitle">{{slide.leyend.big_Subtitle}}</h1>
-        <p class="lit_Subtitle">{{slide.leyend.lit_Subtitle}}</p>
-        @if (slide.leyend.image) {
-          <img class="leyend_img" [src]="slide.leyend.image">
-        }
-        <h3 class="footer">{{slide.leyend.footer}}</h3>
+        <h1 [ngClass]="{'main': slide.first}">{{slide.leyend.header}}</h1>
+        <p [ngClass]="{'subtitle': slide.first}">{{slide.leyend.body}}</p>
+        <h3>{{slide.leyend.footer}}</h3>
+        <button class="contact">Contactanos</button>
         </div>
       }
       <img [src]='slide.url' [alt]="slide.title">
