@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule} from '@angular/router';
-import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { Employee } from '../../../interfaces/Employee';
+import { RegisterService } from './register.service';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +12,7 @@ import { Employee } from '../../../interfaces/Employee';
   standalone: true,
   imports: [RouterModule, FormsModule, HttpClientModule]
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   employeeCode: string = '';
   employeeName: string = ''
   employeeArea: string = ''
@@ -21,17 +21,10 @@ export class RegisterComponent implements OnInit {
     area: ''
   };
   // submitted: boolean = false;
-  constructor(private router: Router, private http: HttpClient){}
-
-  ngOnInit() {
-  }
-
-  findMember(memberCode: string){
-    return this.http.get<any>(`http://192.168.21.52:3600/api/employee/findMember/?code=${memberCode}`)
-  }
+  constructor(private router: Router, private registerService: RegisterService ){}
 
   validateCode(){
-    let member = this.findMember(this.employeeCode).subscribe({
+    let member = this.registerService.findMember(this.employeeCode).subscribe({
       next: (res) => {
         this.memberInformation = res;
       },

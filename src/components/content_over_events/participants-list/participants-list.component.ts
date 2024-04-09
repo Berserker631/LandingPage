@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common"
 import * as confetti from 'canvas-confetti';
 import { Employee } from '../../../interfaces/Employee';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ParticipantsService } from './participants.service';
 
 @Component({
   selector: 'app-participants-list',
@@ -23,15 +24,12 @@ export class ParticipantsListComponent implements OnInit {
   members: Employee[] = [];
   index: number = 0;
 
-  constructor(private http: HttpClient) { }
+  constructor(private participantService: ParticipantsService) { }
 
-  loadMembers(){
-    return this.http.get<any>(`http://192.168.21.52:3600/api/employee/`)
-  }
 
 
   ngOnInit() {
-    this.loadMembers().subscribe({
+    this.participantService.loadMembers().subscribe({
       next: (response) => {
         this.members = response;
       },
